@@ -1,12 +1,12 @@
 ---
-import GitHub from "./icons/GitHub.astro"
-import Link from "./icons/Link.astro"
-import LinkButton from "./LinkButton.astro"
-import Java from "./icons/Java.astro"
-import Spring from "./icons/Spring.astro"
-import Flutter from "./icons/Flutter.astro"
-import Firebase from "./icons/Firebase.astro"
-import MySQL from "./icons/MySQL.astro"
+import GitHub from "./icons/GitHub.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+import Java from "./icons/Java.astro";
+import Spring from "./icons/Spring.astro";
+import Flutter from "./icons/Flutter.astro";
+import Firebase from "./icons/Firebase.astro";
+import MySQL from "./icons/MySQL.astro";
 
 const TAGS = {
   JAVA: {
@@ -34,7 +34,7 @@ const TAGS = {
     class: "bg-black text-white dark:bg-gray-800",
     icon: MySQL,
   },
-}
+};
 const PROJECTS = [
   {
     title: "DaVinciWeb - E-commerce web para Óptica",
@@ -47,68 +47,79 @@ const PROJECTS = [
   },
   {
     title: "Patrick Coins",
-    description: "Plataforma de inversión en criptomonedas, hecho con Java, Spring y MySQL. Hecho con el equipo de la simulación laboral, fui responsable del desarrollo backend con arquitectura MVC.",
+    description:
+      "Plataforma de inversión en criptomonedas, hecho con Java, Spring y MySQL. Hecho con el equipo de la simulación laboral, fui responsable del desarrollo backend con arquitectura MVC.",
     link: "https://c17-35-m-java.vercel.app/",
     github: "https://github.com/No-Country-simulation/c17-35-m-java",
-    image: "./projects/patrickCoins.png",
-    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.MYSQL]
+    image: "./projects/patrickCoins.jpg",
+    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.MYSQL],
   },
   {
     title: "Educar para transformar - Plataforma de gestión educativa",
-    description: "Plataforma de gestión para alumnos, docentes, padres y personal administrativo. Creamos tres aplicaciones (Web, Desktop y Mobile) con Flutter y Firebase, conjunto a un equipo de 3 personas.",
+    description:
+      "Plataforma de gestión para alumnos, docentes, padres y personal administrativo. Creamos tres aplicaciones (Web, Desktop y Mobile) con Flutter y Firebase, conjunto a un equipo de 3 personas.",
     github: "https://github.com/Agustin-Basilio-Matijasevich/ept_frontend_web",
-    image: "./projects/EPT.png",
-    tags: [TAGS.FLUTTER, TAGS.FIREBASE]
+    image: "./projects/EPT.jpg",
+    tags: [TAGS.FLUTTER, TAGS.FIREBASE],
   },
-]
+];
 ---
 
-<div class="flex flex-col gap-y-16">
+<div class="flex flex-col gap-y-16 px-3">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Captura de pantalla del proyecto" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-    </div>
-  </div>
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt="Captura de pantalla del proyecto"
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
 
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
-              Código              
-            </LinkButton>
-          )}
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Proyecto
-            </LinkButton>
-          )}
-        </footer>
-    </div>
-  </div>
-</article>
+          <div class="flex flex-col mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+
+            <footer class="flex justify-center sm:justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-6" />
+                  Repositorio
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-6" />
+                  Proyecto
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
     ))
   }
 </div>
