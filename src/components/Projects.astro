@@ -7,6 +7,8 @@ import Spring from "./icons/Spring.astro";
 import Flutter from "./icons/Flutter.astro";
 import Firebase from "./icons/Firebase.astro";
 import MySQL from "./icons/MySQL.astro";
+import Rabbitmq from "./icons/Rabbitmq.astro";
+import Docker from "./icons/Docker.astro";
 
 const TAGS = {
   JAVA: {
@@ -34,33 +36,44 @@ const TAGS = {
     class: "bg-black text-white dark:bg-gray-800",
     icon: MySQL,
   },
+  RABBITMQ: {
+    name: "Rabbitmq",
+    class: "bg-black text-white dark:bg-gray-800",
+    icon: Rabbitmq,
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-black text-white dark:bg-gray-800",
+    icon: Docker,
+  },
 };
 const PROJECTS = [
+{
+    title: "E-commerce API - Proyecto final de Curso",
+    description:
+      "E-commerce API diseñado para administrar productos, carritos y clientes. Implementado con los patrones de diseño \"decorator\" y \"factory\" y arquitectura MVC.",
+    link: "http://98.83.153.240/swagger-ui/index.html",
+    github: "https://github.com/Alankke/Ecommerce",
+    image: "./projects/Ecommerce-API.jpg",
+    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.DOCKER, TAGS.RABBITMQ],
+  },
   {
     title: "DaVinciWeb - E-commerce web para Óptica",
     description:
-      "E-commerce web para una óptica. Creado como proyecto final de la universidad. Creada desde cero con Flutter y Firebase.",
+      "E-commerce web para una óptica. Creado como proyecto final de la universidad. Desarrollado desde cero con Flutter y Firebase.",
     link: "https://davinciweb-3e35f.web.app/",
     github: "https://github.com/Alankke/davinciweb",
     image: "./projects/davinciwebproject.webp",
     tags: [TAGS.FLUTTER, TAGS.FIREBASE],
   },
   {
-    title: "Patrick Coins",
+    title: "Patrick Coins - Proyecto simulación laboral",
     description:
       "Plataforma de inversión en criptomonedas, hecho con Java, Spring y MySQL. Hecho con el equipo de la simulación laboral, fui responsable del desarrollo backend con arquitectura MVC.",
     link: "https://c17-35-m-java.vercel.app/",
     github: "https://github.com/No-Country-simulation/c17-35-m-java",
     image: "./projects/patrickCoins.jpg",
     tags: [TAGS.JAVA, TAGS.SPRING, TAGS.MYSQL],
-  },
-  {
-    title: "Educar para transformar - Plataforma de gestión educativa",
-    description:
-      "Plataforma de gestión para alumnos, docentes, padres y personal administrativo. Creamos tres aplicaciones (Web, Desktop y Mobile) con Flutter y Firebase, conjunto a un equipo de 3 personas.",
-    github: "https://github.com/Agustin-Basilio-Matijasevich/ept_frontend_web",
-    image: "./projects/EPT.jpg",
-    tags: [TAGS.FLUTTER, TAGS.FIREBASE],
   },
 ];
 ---

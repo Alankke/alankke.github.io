@@ -3,12 +3,13 @@ import AboutMe from "../components/AboutMe.astro";
 import Experience from "../components/Experience.astro";
 import Hero from "../components/Hero.astro";
 import Projects from "../components/Projects.astro";
+import Education from "../components/Education.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
-	title="Porfolio de Alan Kennedy - Desarrollador y Programador Backend"
+	title="Porfolio de Alan Kennedy - Desarrollador Backend"
 	description="Puedes contratarme para materializar tu idea en software"
 >
 	<main class="px-4">
@@ -34,6 +35,13 @@ import Layout from "../layouts/Layout.astro";
 			</h2>
 			<Projects />
 		</SectionContainer>
+
+		<SectionContainer id="educacion">
+      <h2 class="flex items-center mb-6 text-3xl font-semibold text-black/80 dark:text-white">
+        Educación
+      </h2>
+      <Education />
+    </SectionContainer>
 
 		<SectionContainer id="sobre-mi">
 			<h2

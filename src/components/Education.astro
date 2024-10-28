@@ -1,0 +1,24 @@
+---
+const EDUCATION = [
+  {
+    institution: "Universidad Tecnológica Nacional - Resistencia, Chaco",
+    degree: "Tecnicatura Universitaria en Programación - 2022 a 2024",
+    description: "Estudios centrados en desarrollo de software backend con Java y C#. Conceptos sobre programación orientada a objetos, arquitectura de computadoras, patrones de diseño y más."
+  },
+  {
+    institution: "Globant University",
+    degree: "Globant Java Bootcamp - 2024",
+    description: "Curso intensivo con enfoque en Java y SpringBoot. Se realizó un proyecto final integrando SpringBoot, H2 database, RabbitMQ para enviar emails, caching, patrones de diseño, Docker y despliegue con AWS."
+  },
+];
+---
+
+<div class="flex flex-col gap-y-8">
+  {EDUCATION.map(({ institution, degree, description }) => (
+    <article class="flex flex-col space-y-2">
+      <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">{degree}</h3>
+      <span class="text-gray-600 dark:text-gray-400">{institution}</span>
+      <p class="text-gray-700 dark:text-gray-400">{description}</p>
+    </article>
+  ))}
+</div>
