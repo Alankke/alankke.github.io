@@ -3,6 +3,7 @@ import Badge from "./Badge.astro"
 import SocialPill from "./SocialPill.astro"
 import MailIcon from "./icons/Mail.astro"
 import LinkedInIcon from "./icons/LinkedIn.astro"
+import CvIcon from "./icons/Cv.astro"
 const profilePhotoAlt = "Alan Kennedy"
 ---
 
@@ -37,11 +38,15 @@ const profilePhotoAlt = "Alan Kennedy"
   <nav class="flex flex-wrap gap-4 mt-8">
     <SocialPill href="mailto:alaneduardokennedy@gmail.com">
       <MailIcon class="size-4" />
-      Contáctame
+      Correo electrónico
     </SocialPill>
     <SocialPill href="https://linkedin.com/in/alankennedyy">
       <LinkedInIcon class="size-4" />
       LinkedIn
+    </SocialPill>
+    <SocialPill href="https://docs.google.com/document/d/18Erp1faNsYbPY-Oz-bLfpfLcTD6DY9zu/edit?usp=sharing&ouid=104967369668572909951&rtpof=true&sd=true">
+      <CvIcon class="size-4" />
+      Currículum
     </SocialPill>
   </nav>
 </div>
